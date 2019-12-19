@@ -1,10 +1,13 @@
  <div class="container-fluid">
   <div class="row">
     <div class="col-sm">
-      One of three columns
+      Lỗi: {{error}}
     </div>
     <div class="col-sm">
-        <form>
+        <form   class="inputFileForm"
+            action="/demo"
+            enctype="multipart/form-data"
+            method="POST" >
         <div class="form-group row">
             <label for="inputPassword" class="col-sm-2 col-form-label">KEY</label>
             <div class="col-sm-10">
@@ -14,13 +17,21 @@
         <div class="form-group row">
             <label for="inputPasswor" class="col-sm-2 col-form-label">FILE</label>
             <div class="col-sm-10">
-            <input type="file" name="voice" class="form-control" id="inputPasswor" placeholder="Password">
+             <input
+                class="btn_2 banner_btn_2"
+                type="file"
+                id="myFile"
+                name="myFile"
+                accept="audio/wav"
+                required
+              />
             </div>
         </div>
+         <button type="submit" class="btn btn-primary mb-2">TEST</button>
         </form>
     </div>
     <div class="col-sm">
-      One of three columns
+       kết quả:  HƠI LÂU ĐỢI XÍU NHA:  {{result}}
     </div>
   </div>
 </div>
